@@ -248,7 +248,7 @@ public class MainClass {
         }
         
         // step 3 - Get the ones of the same Size in a sublist
-        TStruct[] allSizes = new TStruct[7];
+        TStruct[] allSizes = new TStruct[7];//array of TStructs
         int counter = 0; // shirts.get(counter) <-- 0 
         for(int i = 0; i < 7; i++) {
             allSizes[i] = new TStruct();
@@ -258,7 +258,7 @@ public class MainClass {
             } else {
                 allSizes[i].start = counter; // 0 
                 allSizes[i].end = counter + sBySize[i] - 1;
-                subLists.add(shirtsBySize.subList(allSizes[i].start, allSizes[i].end)); // this line isn't correct we need to correct it
+                subLists.add(shirtsBySize.subList(allSizes[i].start, allSizes[i].end+1)); // this line isn't correct we need to correct it
             }
             counter += sBySize[i];
         }
